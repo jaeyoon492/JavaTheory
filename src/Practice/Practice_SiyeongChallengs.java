@@ -47,7 +47,7 @@ public class Practice_SiyeongChallengs {
                 failcount = 0;
             }
 
-            System.out.println("총" + count + "개 맞췄고" + failcount + "개 틀렸습니다.");
+            System.out.println("총" + count + "개 맞았고" + failcount + "개 틀렸습니다.");
 
         }while(true);
 
