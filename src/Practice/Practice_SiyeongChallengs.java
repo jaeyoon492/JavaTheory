@@ -9,7 +9,7 @@ public class Practice_SiyeongChallengs {
         int[] answer = {(int)(Math.random()*9)+1, (int)(Math.random()*9), (int)(Math.random()*9)};
 
         String number = new String();
-        int[] num;
+        int[] num = new int [3];
         int failcount = 0;
         int count = 0;
         int input = 0;
@@ -19,12 +19,10 @@ public class Practice_SiyeongChallengs {
 
         do {
             System.out.print("세자리의 숫자를 입력하세요");
-            number = sc.nextLine();
-            for (int i = 0; i < number.length(); i++){
-                num = number
+
+            for (int i = 0 ; i < num.length; i++){
+                num[i] = sc.nextInt();
             }
-
-
 
             if(num[0] == answer[0]) {
                 count++;
@@ -42,6 +40,11 @@ public class Practice_SiyeongChallengs {
                 count++;
             }else if (num[2] != answer[2]) {
                 failcount++;
+            }
+            if(num[0] != answer[0]){
+                count = 0;
+            }else{
+                failcount = 0;
             }
 
             System.out.println("총" + count + "개 맞췄고" + failcount + "개 틀렸습니다.");
