@@ -50,10 +50,9 @@ public class Practice_SiyeongChallengs {
                 count = 0;
                 failcount = 0;
             }
-            
+
 
         }while(true);
-
 
 
     }
