@@ -2,7 +2,6 @@ package Practice;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class Practice_SiyeongChallengs {
     public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class Practice_SiyeongChallengs {
         int howMany = 0;
         String input;      //입력받은 숫자를 저장하기 위한.
         Scanner sc = new Scanner(System.in);
-        
+
 
         do {
             System.out.print("세자리 숫자를 입력하세요");
@@ -49,10 +48,9 @@ public class Practice_SiyeongChallengs {
             } else if (answer[0] != guess[0] || answer[1] != guess[1] || answer[2] != guess[2]){
                 System.out.println("총" + count + "개 맞았고" + failcount + "개 틀렸습니다.");
                 count = 0;
-            failcount = 0;
+                failcount = 0;
             }
-
-
+            
 
         }while(true);
 
