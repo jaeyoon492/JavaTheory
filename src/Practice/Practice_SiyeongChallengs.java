@@ -27,22 +27,12 @@ public class Practice_SiyeongChallengs {
 
 
             //if else 문 for문으로 수정.
-            if(answer[0] == guess[0]) {
-                count++;
-            }else if (answer[0] != guess[0]) {
-                failcount++;
-            }
-
-            if(answer[1] == guess[1]) {
-                count++;
-            }else if (answer[1] != guess[1]) {
-                failcount++;
-            }
-
-            if(answer[2] == guess[2]) {
-                count++;
-            }else if (answer[2] != guess[2]) {
-                failcount++;
+            for(int i = 0; i < answer.length; i++){
+                if(answer[i] == guess[i]){
+                    count++;
+                }else if (answer[i] != guess[i]) {
+                    failcount++;
+                }
             }
 
 
