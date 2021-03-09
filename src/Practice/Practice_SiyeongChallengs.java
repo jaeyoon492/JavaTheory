@@ -15,14 +15,18 @@ public class Practice_SiyeongChallengs {
         Scanner sc = new Scanner(System.in);
 
 
+        //split을 사용해서 만들어보자. ""
         do {
             System.out.print("세자리 숫자를 입력하세요");
             howMany++;
             input = sc.nextLine();
             Integer.parseInt(input); //저장한 문자를 숫자로 전환.
             int[] guess = {input.charAt(0)-48,input.charAt(1)-48,input.charAt(2)-48}; //3자리수로 받아서 분할후 배열화
+            //input 을 배열로 만들고
+            //각각을 parseint 하여 숫자배열로 다시초기화.
 
 
+            //if else 문 for문으로 수정.
             if(answer[0] == guess[0]) {
                 count++;
             }else if (answer[0] != guess[0]) {
@@ -41,6 +45,8 @@ public class Practice_SiyeongChallengs {
                 failcount++;
             }
 
+
+            //retry 추가 수정.
             if(answer[0] == guess[0] && answer[1] == guess[1] && answer[2] == guess[2]){
                 System.out.println("정답!");
                 System.out.println("시도하신 횟수는" + howMany + "입니다.");
@@ -52,7 +58,7 @@ public class Practice_SiyeongChallengs {
             }
 
 
-        }while(true);
+        }while(true); //retry
 
 
     }
