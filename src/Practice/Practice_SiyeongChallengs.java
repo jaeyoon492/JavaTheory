@@ -5,33 +5,33 @@ import java.util.Scanner;
 
 public class Practice_SiyeongChallengs {
     public static void main(String[] args) {
-        int[] answer = {(int)(Math.random()*9)+1, (int)(Math.random()*9), (int)(Math.random()*9)}; //3자리 난수를 받는다.
-
-        System.out.println(Arrays.toString(answer));
         int failcount = 0; //실패시 카운트
         int count = 0;     //성공시 카운트
-        int howMany = 0;
-        int[] guess = new int[1];      //입력받은 숫자를 저장하기 위한.
+        int howMany = 0;   //시도 횟수 카운트
+        int guess[] = new int[3]; //숫자로 변환한 값을 저장하는 배열
         Scanner sc = new Scanner(System.in);
+        String input [];   //input을 배열로 만들고 (x)
+        boolean retry = true;
+        String yn;         //retry 입력값을 저장할 변수.
 
 
-        //split을 사용해서 만들어보자. ""
+
+        //split을 사용해서 만들어보자. ("")(x)
         do {
-            System.out.print("세자리 숫자를 입력하세요");
+            int[] answer = {(int)(Math.random()*9)+1, (int)(Math.random()*9), (int)(Math.random()*9)};//3자리 난수를 받는다.
+            System.out.println(Arrays.toString(answer));
+            System.out.println("숫자 게임을 시작합니다.");
+            System.out.print("세자리 숫자를 입력하세요.");
             howMany++;
-            for(int i = 0; i < 1; i++){
-                guess[i] = sc.nextInt();
+            String str;
+            str = sc.nextLine();
+            input = str.split("");
+            for(int i = 0; i < input.length; i++){
+                guess[i] = Integer.parseInt(input[i]); //각각을 parseint 하여 숫자배열로 다시초기화.(x)
             }
-            int num[] = guess.spl
-            System.out.println(Arrays.toString(guess));
-
-            //Integer.parseInt(input); //저장한 문자를 숫자로 전환.
-            //int[] guess = {input.charAt(0)-48,input.charAt(1)-48,input.charAt(2)-48}; //3자리수로 받아서 분할후 배열화
-            //input 을 배열로 만들고
-            //각각을 parseint 하여 숫자배열로 다시초기화.
 
 
-            //if else 문 for문으로 수정.
+            //if else 문 for문으로 수정.(x)
             for(int i = 0; i < answer.length; i++){
                 if(answer[i] == guess[i]){
                     count++;
@@ -40,12 +40,22 @@ public class Practice_SiyeongChallengs {
                 }
             }
 
-
-            //retry 추가 수정.
+            //retry 추가 수정.(x)
             if(answer[0] == guess[0] && answer[1] == guess[1] && answer[2] == guess[2]){
                 System.out.println("정답!");
                 System.out.println("시도하신 횟수는" + howMany + "입니다.");
-                break;
+                System.out.println();
+                System.out.println("게임을 계속 하시겠습니까? y/n");
+
+                yn = sc.nextLine();
+                    if (yn.equals("y")){
+                        retry = true;
+                    } else if(yn.equals("n")){
+                        retry = false;
+                        System.out.println("게임을 종료합니다.");
+                    }
+
+
             } else if (answer[0] != guess[0] || answer[1] != guess[1] || answer[2] != guess[2]){
                 System.out.println("총" + count + "개 맞았고" + failcount + "개 틀렸습니다.");
                 count = 0;
@@ -53,7 +63,7 @@ public class Practice_SiyeongChallengs {
             }
 
 
-        }while(true); //retry
+        }while(retry);
 
 
     }
