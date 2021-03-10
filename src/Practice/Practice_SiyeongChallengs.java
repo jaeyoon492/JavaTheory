@@ -11,7 +11,7 @@ public class Practice_SiyeongChallengs {
         int failcount = 0; //실패시 카운트
         int count = 0;     //성공시 카운트
         int howMany = 0;
-        String input;      //입력받은 숫자를 저장하기 위한.
+        int[] guess = new int[1];      //입력받은 숫자를 저장하기 위한.
         Scanner sc = new Scanner(System.in);
 
 
@@ -19,9 +19,14 @@ public class Practice_SiyeongChallengs {
         do {
             System.out.print("세자리 숫자를 입력하세요");
             howMany++;
-            input = sc.nextLine();
-            Integer.parseInt(input); //저장한 문자를 숫자로 전환.
-            int[] guess = {input.charAt(0)-48,input.charAt(1)-48,input.charAt(2)-48}; //3자리수로 받아서 분할후 배열화
+            for(int i = 0; i < 1; i++){
+                guess[i] = sc.nextInt();
+            }
+            int num[] = guess.spl
+            System.out.println(Arrays.toString(guess));
+
+            //Integer.parseInt(input); //저장한 문자를 숫자로 전환.
+            //int[] guess = {input.charAt(0)-48,input.charAt(1)-48,input.charAt(2)-48}; //3자리수로 받아서 분할후 배열화
             //input 을 배열로 만들고
             //각각을 parseint 하여 숫자배열로 다시초기화.
 
