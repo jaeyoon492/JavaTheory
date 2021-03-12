@@ -18,4 +18,3 @@ public class Ex8_10 {
         return f;
     }
 }
- 
