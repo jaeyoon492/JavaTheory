@@ -10,11 +10,12 @@ public class Quiz8_7 {
             count++;
             System.out.println("1과 100사이의 값을 입력하세요. : ");
 
-           try {
-               input = new Scanner(System.in).nextInt();
-           } catch (Exception e) {
-               System.out.println("숫자를 입력하세요.");
-           }
+            try{
+                input = new Scanner(System.in).nextInt();
+            }catch(InputMismatchException e){
+                System.out.println("유효하지 않은 값입니다. 다시 값을 입력해주세요.");
+                continue;
+            }
 
             if(answer > input) {
                 System.out.println("더 큰수를 입력하세요.");
