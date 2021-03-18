@@ -8,7 +8,7 @@ public class Practice_SiyeongChallengs {
         int[] ranArr = {(int) (Math.random() * 9) + 1, (int) (Math.random() * 9), (int) (Math.random() * 9)};//3자리 난수를 받는 메서드
         return ranArr;
     }
-    static String[] split(){ //입력값(문자열)을 잘라주는 메서드
+    static String[] split(){ //입력값(문자열)을 잘라서 배열에 저장하는 메서드
         Scanner sc = new Scanner(System.in);
         String str;
         str = sc.nextLine();
