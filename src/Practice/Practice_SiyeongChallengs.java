@@ -2,8 +2,11 @@ package Practice;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Practice_SiyeongChallengs {
+    ArrayList list1 = new ArrayList();
+
     static int[] ranNumMaker() {
         int[] ranArr = {(int) (Math.random() * 9) + 1, (int) (Math.random() * 9), (int) (Math.random() * 9)};//3자리 난수를 받는 메서드
         return ranArr;
