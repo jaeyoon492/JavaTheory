@@ -24,6 +24,11 @@ public class MjList {
         return true;
     }
 
+    //이 기능은 단순히 element를 추가하는 메서드를 호출하여 해당 엘리먼트에 index값을 0번으로 지정해 항상 첫번째 자리에 배치하는 메서드 이다.
+    public boolean addFirst(Object element){
+        return add(0 , element);
+    }
+
     // 에드인데 또다른 느낌의 기능????? 일때 오버로딩 하면 이름도 하나로 재탕 가능하고 사용하는 사람도 편해
     public boolean add(int index, Object element){
         //배열의 위치를 인자로 받아 index로 초기화하고, 해당 배열에 새로들어올 element 값을 인자로 받는다.
@@ -37,8 +42,33 @@ public class MjList {
         return true;
     }
 
-    public boolean addFirst(Object element){
-        return add(0 , element);
-    }
+    //toString 이라는 것을 구현하게 되면 객체를 문자로 출력하는 상황에서 toString 이라는 이름의 메소드가 호출되도록 약속 되어있다.
+    //임의의 변수 str에 "[" 을 저장하고 return 값에 str + "]" 하여 그 사이에 포문을 돌려 배열의 길이 만큼 가리키는 값을 추가한다.
+     public String toString(){
+        String str = "[";
+        for(int i = 0; i < size; i++) {
+            str += elementData[i];
+            if(i < size-1) {
+                str += ",";
+            }
+        }
+        return str + "]";
+     }
+
+     //해당인덱스를 삭제하고 그 자리로 다음 인덱스 들을 당겨오는 메서드이다.
+    //반복문으로 당겨올 인덱스를 지정하는것은 삭제할 인덱스 바로 옆자리 이기 때문에 index+1 로 시작한다.
+    //반복문의 끝은 인덱스의 배열마지막 번호인데 그것을 특정할수 없으므로 총 배열갯수에서 -1 을 한 size-1 까지로 정한다.
+    //반복할 내용은 빠진 자리를 메우는 기능을 하기 위해선 원래 있던 기존 index자리에서 -1 즉 element[i-1]에 저장하면 된다.
+    //반복문을 통해 한칸씩 당겨졌지만 마지막 인덱스의 값은 그대로 존재 하기 때문에       ex: 4번칸에 5번을 저장한것이지 5번을 삭제한것은 아님
+    //가장 마지막 배열을 가리키는 element[size]를 null로 초기화해준다.
+     public Object remove(int index){
+        Object removed = elementData[index];
+        for(int i = index + 1; i <= size - 1; i++){
+            elementData[i - 1] = elementData[i];
+        }
+        size--;
+        elementData[size] = null;
+        return removed;
+     }
 
 }

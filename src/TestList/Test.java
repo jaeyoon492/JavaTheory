@@ -7,7 +7,8 @@ public class Test {
         ml.add(20);
         ml.add(30);
         ml.add(40);
-        ml.add("12");
-        ml.add(2,21);
+        ml.add(1,21);
+        ml.remove(1);
+        System.out.println(ml);
     }
 }

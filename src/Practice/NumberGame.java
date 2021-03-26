@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class NumberGame extends Practice_Challengs {
     Scanner sc = new Scanner(System.in);
-    JyArray sa = new JyArray();
+    JyArray ja = new JyArray();
     JyList jl = new JyList();
     List<Integer> answer = jl.ranNumMaker();
 
@@ -16,7 +16,7 @@ public class NumberGame extends Practice_Challengs {
        do {
            System.out.print("세자리 숫자를 입력하세요.");
            howMany++;
-           input = sa.splitArray();
+           input = ja.InsertArraySplit();
            for (int i = 0; i < input.length; i++) {
                guess[i] = Integer.parseInt(input[i]);
            }
