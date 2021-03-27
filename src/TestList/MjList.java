@@ -37,14 +37,14 @@ public class MjList {
         for(int i = size-1; i >= index; i-- ){
             elementData[i+1] = elementData[i];
         }
-        elementData[index] = element;
+        elementData[index] = element; //인덱스의 역할을 만들어주는 코드.
         size++;
         return true;
     }
 
     //toString 이라는 것을 구현하게 되면 객체를 문자로 출력하는 상황에서 toString 이라는 이름의 메소드가 호출되도록 약속 되어있다.
     //임의의 변수 str에 "[" 을 저장하고 return 값에 str + "]" 하여 그 사이에 포문을 돌려 배열의 길이 만큼 가리키는 값을 추가한다.
-     public String toString(){
+    public String toString(){ //이거슨 오버라이딩임 자바의 toString 보다 우선순위에 있다.
         String str = "[";
         for(int i = 0; i < size; i++) {
             str += elementData[i];
@@ -53,7 +53,7 @@ public class MjList {
             }
         }
         return str + "]";
-     }
+    }
 
      //해당인덱스를 삭제하고 그 자리로 다음 인덱스 들을 당겨오는 메서드이다.
     //반복문으로 당겨올 인덱스를 지정하는것은 삭제할 인덱스 바로 옆자리 이기 때문에 index+1 로 시작한다.

@@ -5,11 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class NumberGame extends Practice_Challengs {
-    Scanner sc = new Scanner(System.in);
-    JyArray ja = new JyArray();
+    Scanner sc = new Scanner(System.in); //기본기능이라 파악하기 쉬움
+    JyArray ja = new JyArray();         //혼자 아는 단어라 알기쉽게 풀네임으로 하기
     JyList jl = new JyList();
     List<Integer> answer = jl.ranNumMaker();
-
 
      public void Play(){
          System.out.println(answer);
