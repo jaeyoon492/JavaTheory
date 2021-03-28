@@ -1,4 +1,4 @@
-package TestList;
+package testList;
 
 //MjList라는 객체를 생성
 //객체 내부에서만 사용될 배열이라 private 접근 제어자로 외부의 접근은 차단.
@@ -69,6 +69,35 @@ public class MjList {
         size--;
         elementData[size] = null;
         return removed;
+     }
+     public Object removeFirst(){
+        return remove(0);
+     }
+
+     public Object removeLast(){
+        return remove(size-1);
+     }
+
+     //해당 위치의 [인덱스번호]를 입력하면 그 해당 배열의 (값)을 알려주는 메서드.
+     public Object get(int index){
+        return elementData[index];
+     }
+
+     //배열의 길이를 나타내주는 메서드 굳이 메서드로 만든 이유는 외부에서 size를 맘대로 변경할수 없게 하기 위해서 이다.
+     public int size(){
+        return size;
+     }
+
+     /*indexOf 배열의 벨류값을 파라매터로 입력시 해당 벨류의 인덱스 번호를 알려줌 for문을 통해 0~size까지 전부 확인할 필요가 있고
+     if문을 통해 받아온 인자값과 elementData[i]의 값이 같으면 i 즉 배열의 인덱스 번호를 리턴하고 포문을 강제종료 시키는 메서드 이다.
+    만일 해당하는 값이 없으면 -1을 출력한다.*/
+     public  int indexOf(Object o){
+        for(int i = 0; i < size; i++){
+            if(o.equals(elementData[i])){
+                return i;
+            }
+        }
+        return -1;
      }
 
 }

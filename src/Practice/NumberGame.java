@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class NumberGame extends Practice_Challengs {
-    Scanner sc = new Scanner(System.in); //기본기능이라 파악하기 쉬움
-    JyArray ja = new JyArray();         //혼자 아는 단어라 알기쉽게 풀네임으로 하기
-    JyList jl = new JyList();
-    List<Integer> answer = jl.ranNumMaker();
+    Scanner scanner = new Scanner(System.in); //기본기능이라 파악하기 쉬움
+    JyArray jyArray = new JyArray();         //혼자 아는 단어라 알기쉽게 풀네임으로 하기
+    JyList jyList = new JyList();
+    List<Integer> answer = jyList.ranNumMaker();
 
-     public void Play(){
+     public void play(){
          System.out.println(answer);
        do {
            System.out.print("세자리 숫자를 입력하세요.");
            howMany++;
-           input = ja.InsertArraySplit();
+           input = jyArray.insertArraySplit();
            for (int i = 0; i < input.length; i++) {
                guess[i] = Integer.parseInt(input[i]);
            }
@@ -35,12 +35,12 @@ public class NumberGame extends Practice_Challengs {
                howMany = 0;
                System.out.println();
                System.out.println("게임을 계속 하시겠습니까? y/n");
-               yn = sc.nextLine();
+               yn = scanner.nextLine();
 
                if (yn.equals("y")) {
                    retry = true;
                    System.out.println("게임을 다시 시작합니다.");
-                   answer = jl.ranNumMaker();
+                   answer = jyList.ranNumMaker();
                    count = 0;
                    failcount = 0;
                    System.out.println(answer);
