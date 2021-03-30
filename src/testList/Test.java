@@ -9,6 +9,7 @@ public class Test {
         ml.add(40);
         ml.add(1,21);
         ml.remove(1);
+        ml.add("Hello World!");
         System.out.println(ml);
     }
 }
