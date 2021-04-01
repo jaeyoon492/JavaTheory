@@ -1,4 +1,4 @@
-package testList;
+package Practice;
 
 //MjList라는 객체를 생성
 //객체 내부에서만 사용될 배열이라 private 접근 제어자로 외부의 접근은 차단.
@@ -15,6 +15,13 @@ public class MjList {
     // 오브젝트로 하는게 맞아
 
     private Object[] elementData = new Object[100];
+
+    public boolean add(Object element1, Object element2, Object element3){
+        elementData[0] = element1;
+        elementData[1] = element2;
+        elementData[2] = element3;
+        return true;
+    }
 
     public boolean add(Object element){
         //addLast호출시 받아오는 입력값인 element가 elementData[0]에 들어가게 된다.
@@ -74,7 +81,7 @@ public class MjList {
         return remove(0);
      }
 
-     public Object removeLast(){
+     public Object removeList(){
         return remove(size-1);
      }
 

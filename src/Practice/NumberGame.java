@@ -1,12 +1,13 @@
 package Practice;
 
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.Scanner;
-
+//상속의 사용이 어색하다 상속은 주로 같은 각 클래스당 같은 역할을 부여해야 할때 주로 사용하는데 이 경우엔 단지 변수를 옮기기 위해 사용했기 때문
+//상속을 사용하기 싫은데 파라매터 사용법을 잘 모르겠다.
 public class NumberGame extends Practice_Challengs {
     Scanner scanner = new Scanner(System.in); //기본기능이라 파악하기 쉬움
-    JyArray jyArray = new JyArray();         //혼자 아는 단어라 알기쉽게 풀네임으로 하기
+    JyArray jyArray = new JyArray();//혼자 아는 단어라 알기쉽게 풀네임으로 하기
     JyList jyList = new JyList();
     List<Integer> answer = jyList.ranNumMaker();
 
@@ -15,21 +16,18 @@ public class NumberGame extends Practice_Challengs {
        do {
            System.out.print("세자리 숫자를 입력하세요.");
            howMany++;
-           input = jyArray.insertArraySplit();
-           for (int i = 0; i < input.length; i++) {
-               guess[i] = Integer.parseInt(input[i]);
-           }
-           System.out.println(Arrays.toString(guess));
+           List<Integer> inputNum = jyArray.insertListSplit();
+           System.out.println(inputNum);
 
            for (int i = 0; i < answer.size(); i++) {
-               if (answer.get(i) == guess[i]) {
+               if (answer.get(i) == inputNum.get(i)) {
                    count++;
-               } else if (answer.get(i) != guess[i]) {
+               } else if (answer.get(i) != inputNum.get(i)) {
                    failcount++;
                }
            }
 
-           if (answer.get(0) == guess[0] && answer.get(1) == guess[1] && answer.get(2) == guess[2]) {
+           if (answer.get(0) == inputNum.get(0) && answer.get(1) == inputNum.get(1) && answer.get(2) == inputNum.get(2)) {
                System.out.println("정답!");
                System.out.println("시도하신 횟수는" + howMany + "입니다.");
                howMany = 0;
@@ -49,7 +47,7 @@ public class NumberGame extends Practice_Challengs {
                    System.out.println("게임을 종료합니다.");
                }
 
-           } else if (answer.get(0) != guess[0] || answer.get(1) != guess[1] || answer.get(2) != guess[2]) {
+           } else if (answer.get(0) != inputNum.get(0) || answer.get(1) != inputNum.get(1) || answer.get(2) != inputNum.get(2)) {
                System.out.println("총" + count + "개 맞았고 " + failcount + "개 틀렸습니다.");
                count = 0;
                failcount = 0;
