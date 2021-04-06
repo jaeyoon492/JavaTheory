@@ -16,7 +16,7 @@ public class MjList {
 
     private Object[] elementData = new Object[100];
 
-    public boolean add(Object element1, Object element2, Object element3){
+    public boolean add(Object element1, Object element2, Object element3){ /*입력값 3개를 리스트에 저장하려고 만든 기능 */
         elementData[0] = element1;
         elementData[1] = element2;
         elementData[2] = element3;
