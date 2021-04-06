@@ -4,7 +4,7 @@ package collection;
 /*
 * 데이터의 중복을 허용하지 않는다.
 * 생각보다 많이 안쓴다. 즉 까먹는다.
-*  하지만 List와 아주 유사하기 때문에 걱정 ㄴ
+*  하지만 List와 아주 유사하기 때문에 걱정 ㄴㄴ
 * */
 
 import java.util.ArrayList;
