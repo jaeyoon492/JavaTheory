@@ -1,33 +1,38 @@
 package Practice;
 
-
 import java.util.List;
 import java.util.Scanner;
 //상속의 사용이 어색하다. 상속은 주로 같은 각 클래스당 같은 역할을 부여해야 할때 주로 사용하는데 이 경우엔 단지 변수를 옮기기 위해 사용했기 때문
 //상속을 사용하기 싫은데 파라매터 사용법을 잘 모르겠다.
 public class NumberGame extends Practice_Challengs {
+    int howMany;
+    int count;
+    int failcount;
+    boolean retry;
+    String yn;
     Scanner scanner = new Scanner(System.in); //기본기능이라 파악하기 쉬움
     JyArray jyArray = new JyArray();          //혼자 아는 단어라 알기쉽게 풀네임으로 하기
     JyList jyList = new JyList();
-    List<Integer> answer = jyList.ranNumMaker();
+    List<Integer> answer = jyList.randomNumberMaker();
+
 
      public void play(){
          System.out.println(answer);
        do {
            System.out.print("세자리 숫자를 입력하세요.");
            howMany++;
-           List<Integer> inputNum = jyArray.insertListSplit();
-           System.out.println(inputNum);
+           List<Integer> inputNumber = jyArray.inputNumberMaker();
+           System.out.println(inputNumber.toString());
 
            for (int i = 0; i < answer.size(); i++) {
-               if (answer.get(i) == inputNum.get(i)) {
+               if (answer.get(i) == inputNumber.get(i)) {
                    count++;
-               } else if (answer.get(i) != inputNum.get(i)) {
+               } else if (answer.get(i) != inputNumber.get(i)) {
                    failcount++;
                }
            }
 
-           if (answer.get(0) == inputNum.get(0) && answer.get(1) == inputNum.get(1) && answer.get(2) == inputNum.get(2)) {
+           if (answer.get(0) == inputNumber.get(0) && answer.get(1) == inputNumber.get(1) && answer.get(2) == inputNumber.get(2)) {
                System.out.println("정답!");
                System.out.println("시도하신 횟수는" + howMany + "입니다.");
                howMany = 0;
@@ -38,7 +43,7 @@ public class NumberGame extends Practice_Challengs {
                if (yn.equals("y")) {
                    retry = true;
                    System.out.println("게임을 다시 시작합니다.");
-                   answer = jyList.ranNumMaker();
+                   answer = jyList.randomNumberMaker();
                    count = 0;
                    failcount = 0;
                    System.out.println(answer);
@@ -47,7 +52,7 @@ public class NumberGame extends Practice_Challengs {
                    System.out.println("게임을 종료합니다.");
                }
 
-           } else if (answer.get(0) != inputNum.get(0) || answer.get(1) != inputNum.get(1) || answer.get(2) != inputNum.get(2)) {
+           } else if (answer.get(0) != inputNumber.get(0) || answer.get(1) != inputNumber.get(1) || answer.get(2) != inputNumber.get(2)) {
                System.out.println("총" + count + "개 맞았고 " + failcount + "개 틀렸습니다.");
                count = 0;
                failcount = 0;
