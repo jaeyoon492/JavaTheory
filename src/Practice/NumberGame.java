@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 //상속의 사용이 어색하다. 상속은 주로 같은 각 클래스당 같은 역할을 부여해야 할때 주로 사용하는데 이 경우엔 단지 변수를 옮기기 위해 사용했기 때문
@@ -13,11 +14,11 @@ public class NumberGame extends Practice_Challengs {
     Scanner scanner = new Scanner(System.in); //기본기능이라 파악하기 쉬움
     JyArray jyArray = new JyArray();          //혼자 아는 단어라 알기쉽게 풀네임으로 하기
     JyList jyList = new JyList();
-    List<Integer> answer = jyList.randomNumberMaker();
+    List<Integer> answer = new ArrayList<>(jyList.randomNumberMaker());
 
 
      public void play(){
-         System.out.println(answer);
+         System.out.println(answer.toString());
        do {
            System.out.print("세자리 숫자를 입력하세요.");
            howMany++;
