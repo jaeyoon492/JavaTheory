@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class NumberGame extends Practice_Challengs {
     int howMany;
     int count;
-    int failcount;
+    int failCount;
     boolean retry;
     String yn;
     Scanner scanner = new Scanner(System.in); //기본기능이라 파악하기 쉬움
@@ -29,7 +29,7 @@ public class NumberGame extends Practice_Challengs {
                if (answer.get(i) == inputNumber.get(i)) {
                    count++;
                } else if (answer.get(i) != inputNumber.get(i)) {
-                   failcount++;
+                   failCount++;
                }
            }
 
@@ -46,7 +46,7 @@ public class NumberGame extends Practice_Challengs {
                    System.out.println("게임을 다시 시작합니다.");
                    answer = jyList.randomNumberMaker();
                    count = 0;
-                   failcount = 0;
+                   failCount = 0;
                    System.out.println(answer);
                } else if (yn.equals("n")) {
                    retry = false;
@@ -54,9 +54,9 @@ public class NumberGame extends Practice_Challengs {
                }
 
            } else if (answer.get(0) != inputNumber.get(0) || answer.get(1) != inputNumber.get(1) || answer.get(2) != inputNumber.get(2)) {
-               System.out.println("총" + count + "개 맞았고 " + failcount + "개 틀렸습니다.");
+               System.out.println("총" + count + "개 맞았고 " + failCount + "개 틀렸습니다.");
                count = 0;
-               failcount = 0;
+               failCount = 0;
                retry = true;
            }
        } while (retry);
