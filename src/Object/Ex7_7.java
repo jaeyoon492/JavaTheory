@@ -2,7 +2,7 @@ package Object;
 
 public class Ex7_7 {
     public static void main(String[] args) {
-        Car car = null;
+        Ex6_12 car = null;
         FireEngine fe = new FireEngine();
         FireEngine fe2 = null;
 
@@ -27,7 +27,7 @@ class Car {
     }
 }
 
-class FireEngine extends Car {
+class FireEngine extends Ex6_12 {
     void water() {
         System.out.println("water!!!");
     }
