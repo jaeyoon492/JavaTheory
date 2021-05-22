@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 //상속의 사용이 어색하다. 상속은 주로 같은 각 클래스당 같은 역할을 부여해야 할때 주로 사용하는데 이 경우엔 단지 변수를 옮기기 위해 사용했기 때문
 //상속을 사용하기 싫은데 파라매터 사용법을 잘 모르겠다.
-public class NumberGame extends Practice_Challengs {
+public class NumberGame {
     int howMany;
     int count;
     int failCount;
