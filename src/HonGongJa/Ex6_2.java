@@ -1,4 +1,4 @@
-package 객체지향복습;
+package HonGongJa;
 
 public class Ex6_2 {
     public static void main(String[] args) {

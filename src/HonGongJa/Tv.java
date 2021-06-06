@@ -1,4 +1,4 @@
-package 객체지향복습;
+package HonGongJa;
 
 public class Tv {
     String color;
