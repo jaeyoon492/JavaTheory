@@ -1,4 +1,4 @@
-package HonGongJa;
+package HonGongJa.OOP;
 
 public class Tv {
     String color;

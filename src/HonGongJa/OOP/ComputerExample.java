@@ -1,4 +1,6 @@
-package HonGongJa;
+package HonGongJa.OOP;
+
+import HonGongJa.OOP.Computer;
 
 public class ComputerExample {
     public static void main(String[] args) {

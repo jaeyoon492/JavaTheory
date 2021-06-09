@@ -1,4 +1,6 @@
-package HonGongJa;
+package HonGongJa.OOP;
+
+import HonGongJa.OOP.Calculator;
 
 public class CalculatorExample {
     public static void main(String[] args) {
@@ -14,5 +16,13 @@ public class CalculatorExample {
         System.out.println("result2 : " + result2);
 
         Calculator.powerOff();
+
+        Calculator.execute();
+
+        double result3 = Calculator.areaRectangle(10);
+
+        double result4 = Calculator.areaRectangle(10, 20);
+        System.out.println("정사각형의 넓이 = " + result3);
+        System.out.println("직사각형의 넓이 = " + result4);
     }
 }

@@ -1,4 +1,6 @@
-package HonGongJa;
+package HonGongJa.OOP;
+
+import HonGongJa.OOP.Student;
 
 public class StudentExample {
     public static void main(String[] args) {

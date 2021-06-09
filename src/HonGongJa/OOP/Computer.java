@@ -1,4 +1,4 @@
-package HonGongJa;
+package HonGongJa.OOP;
 
 public class Computer {
     int sum1(int[] values) {

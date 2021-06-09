@@ -1,4 +1,6 @@
-package HonGongJa;
+package HonGongJa.OOP;
+
+import HonGongJa.OOP.Korean;
 
 public class KoreanExample {
     public static void main(String[] args) {

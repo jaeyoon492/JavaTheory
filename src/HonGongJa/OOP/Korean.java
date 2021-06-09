@@ -1,4 +1,4 @@
-package HonGongJa;
+package HonGongJa.OOP;
 
 public class Korean {
     static final String NATION = "대한민국";
