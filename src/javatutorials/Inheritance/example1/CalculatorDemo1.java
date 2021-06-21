@@ -6,6 +6,7 @@ class SubtractionableCalculator extends Calculator {
     }
 }
 
+
 public class CalculatorDemo1 {
     public static void main(String[] args) {
         SubtractionableCalculator c1 = new SubtractionableCalculator();
@@ -13,5 +14,6 @@ public class CalculatorDemo1 {
         c1.sum();
         c1.avg();
         c1.subtract();
+
     }
 }
