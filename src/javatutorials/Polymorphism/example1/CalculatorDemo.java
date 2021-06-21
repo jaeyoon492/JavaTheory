@@ -9,6 +9,5 @@ public class CalculatorDemo {
        Calculator c2 = new CalculatorDecoMinus();
        c2.serOperands(10,20);
        c2.run();
-
     }
 }

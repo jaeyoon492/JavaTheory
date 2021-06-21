@@ -1,20 +1,20 @@
 package javatutorials.Polymorphism.example4;
 
-interface I2{
+interface I2 {
     public String A();
 }
 
-interface I3{
+interface I3 {
     public String B();
 }
 
 
-class D implements I2,I3{
-    public String A(){
+class D implements I2, I3 {
+    public String A() {
         return "A";
     }
 
-    public String B(){
+    public String B() {
         return "B";
     }
 }

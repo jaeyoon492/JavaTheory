@@ -4,7 +4,7 @@ interface I {
 
 }
 
-class C implements I{
+class C implements I {
 
 }
 

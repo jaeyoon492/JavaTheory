@@ -1,7 +1,6 @@
 package javatutorials.Polymorphism.example5;
 
-import javatutorials.interfaces.example2.Calculatable;
-import sun.rmi.transport.tcp.TCPChannel;
+
 
 public class Tv {
     boolean power;
