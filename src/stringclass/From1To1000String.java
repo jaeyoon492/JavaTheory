@@ -1,6 +1,6 @@
 package stringclass;
 
-public class From1To10002 {
+public class From1To1000String {
     public static void main(String[] args) {
         String b = "";
         int a = 0;
@@ -13,6 +13,6 @@ public class From1To10002 {
                 b = "";
             }
         }
-        System.out.println(a);
+        System.out.println("1~1000중에 8이 들어간 숫자는 총 :" + a + "개 입니다.");
     }
 }
