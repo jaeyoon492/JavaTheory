@@ -75,7 +75,7 @@ class Buyer1 {
     }
 }
 
-public class POlymorphismArrays {
+public class PolymorphismArrays {
     public static void main(String[] args) {
         Buyer1 b = new Buyer1();
         b.buy(new Tv1());
