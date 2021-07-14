@@ -1,12 +1,10 @@
 package HonGongJa.Collection;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class IteratorEx1 {
     public static void main(String[] args) {
-        HashSet set = new HashSet();
+        Collection set = new HashSet();
         set.add("1");
         set.add("2");
         set.add("3");
