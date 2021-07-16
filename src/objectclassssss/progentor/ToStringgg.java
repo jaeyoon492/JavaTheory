@@ -1,7 +1,5 @@
 package objectclassssss.progentor;
 
-import HonGongJa.OOP.Car;
-
 import java.util.Objects;
 
 public class ToStringgg {
