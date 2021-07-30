@@ -9,7 +9,7 @@ public class centuryFromYear {
 
     public static void main(String[] args) {
         centuryFromYear centuryFromYear = new centuryFromYear();
-        int num = centuryFromYear.centuryFromYears(10);
+        int num = centuryFromYear.centuryFromYears(1888);
         System.out.println(num);
     }
 }
